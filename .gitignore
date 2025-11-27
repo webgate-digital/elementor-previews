@@ -1,0 +1,69 @@
+.idea
+.env
+wp-content/themes/lunter/node_modules
+
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!wp-content/
+!.github/
+# Ignore all files starting with .
+# .*
+
+# Track these directories (i.e. do NOT ignore them):
+# !.ddev/
+
+# Track these file (i.e. do NOT ignore them)
+!.gitignore
+!.editorconfig
+!readme.md
+
+# Ignore all files that start with ~
+~*
+
+# Ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Ignore everything in the "wp-content" directory, except:
+# "mu-plugins" directory
+# "plugins" directory
+# "themes" directory
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+# wp-content/plugins/index.php
+!wp-content/themes/
+wp-content/themes/index.php
+
+# Ignore all plugins except elementor-previews
+wp-content/plugins/*
+!wp-content/plugins/elementor-previews/
+
+# Ignore specific themes
+wp-content/themes/twenty*/
+
+# Ignore node/grunt dependency directories
+node_modules/

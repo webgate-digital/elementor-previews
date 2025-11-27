@@ -1,0 +1,234 @@
+/**
+ * Elementor Template Previews - CSS Styles
+ * Version: 1.0.0
+ * Dark theme matching Elementor's UI
+ */
+
+/* Grid layout for template library */
+#elementor-template-library-templates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background: #18191A;
+}
+
+.elementor-template-library-template-local {
+    padding: 0 !important;
+}
+
+/* Individual template card styling - Elementor dark style */
+.elementor-template-library-template.elementor-template-library-template-local {
+    flex-direction: column;
+    height: auto;
+    width: calc(33.333% - 12px);
+    min-width: 260px;
+    margin: 0;
+    border: 1px solid #2D2F32;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #1F2123;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.elementor-template-library-template.elementor-template-library-template-local:hover {
+    border-color: #93003C;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Template thumbnail */
+.template-thumbnail {
+    width: 100%;
+    height: 160px;
+    background: #27292B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.template-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.template-thumbnail .no-preview {
+    color: #6D7882;
+    font-size: 40px;
+}
+
+/* Template content area */
+.template-content {
+    padding: 12px 14px;
+    background: #1F2123;
+}
+
+/* Template title */
+.elementor-template-library-template-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    line-height: 1.4;
+    padding: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Template meta information */
+.elementor-template-library-template-meta {
+    font-size: 11px;
+    color: #6D7882;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.elementor-template-library-template-type {
+    background: #93003C;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+}
+
+/* Controls section */
+.elementor-template-library-template-controls {
+    padding: 10px 14px;
+    border-top: 1px solid #2D2F32;
+    background: #242628;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    position: relative;
+    overflow: visible !important;
+}
+
+/* Control buttons */
+.elementor-template-library-template-insert {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    border: none;
+}
+
+/* Insert button - Elementor accent */
+.elementor-template-library-template-insert {
+    background: #93003C;
+    color: #FFFFFF;
+}
+
+.elementor-template-library-template-insert:hover {
+    background: #A8004A;
+}
+
+/* More actions dropdown */
+.ep-more-toggle {
+    padding: 7px 8px;
+    color: #6D7882;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    position: relative !important;
+}
+
+.ep-more-toggle:hover {
+    background: #3A3D40;
+    color: #FFFFFF;
+}
+
+.ep-more-menu {
+    position: absolute;
+    top: unset !important;
+    right: 0;
+    background: #27292B;
+    border: 1px solid #2D2F32;
+    border-radius: 3px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+    min-width: 130px;
+    display: none;
+    overflow: visible;
+}
+
+.ep-more-menu.show {
+    display: block;
+}
+
+.ep-menu-item {
+    padding: 10px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #FFFFFF;
+    transition: background 0.2s ease;
+}
+
+.ep-menu-item:hover {
+    background: #3A3D40;
+}
+
+.ep-menu-delete:hover {
+    background: #93003C;
+}
+
+.ep-menu-item a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .elementor-template-library-template.elementor-template-library-template-local {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .elementor-template-library-template.elementor-template-library-template-local {
+        width: 100%;
+    }
+
+    #elementor-template-library-templates-container {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .elementor-template-library-template-controls {
+        flex-wrap: wrap;
+    }
+}
+
+/* Hide original columns that we don't need */
+.elementor-template-library-local-column-2,
+.elementor-template-library-local-column-3,
+.elementor-template-library-local-column-4,
+.elementor-template-library-local-column-5 {
+    display: none;
+}
