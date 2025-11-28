@@ -2,11 +2,11 @@
 
 /**
  * Plugin Name: Elementor Template Previews
- * Plugin URI: https://yourwebsite.com
+ * Plugin URI: https://webgate.digital/
  * Description: Adds thumbnail preview functionality to Elementor's template library
- * Version: 1.0.1
- * Author: Your Name
- * Author URI: https://yourwebsite.com
+ * Version: 1.0.2
+ * Author: Webgate
+ * Author URI: https://webgate.digital/
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: elementor-previews
@@ -23,7 +23,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('ELEMENTOR_PREVIEWS_VERSION', '1.0.1');
+define('ELEMENTOR_PREVIEWS_VERSION', '1.0.2');
 define('ELEMENTOR_PREVIEWS_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('ELEMENTOR_PREVIEWS_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('ELEMENTOR_PREVIEWS_PLUGIN_FILE', __FILE__);
