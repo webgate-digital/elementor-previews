@@ -4,7 +4,7 @@
  * Plugin Name: Elementor Template Previews
  * Plugin URI: https://yourwebsite.com
  * Description: Adds thumbnail preview functionality to Elementor's template library
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Your Name
  * Author URI: https://yourwebsite.com
  * License: GPL v2 or later
@@ -23,7 +23,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('ELEMENTOR_PREVIEWS_VERSION', '1.0.0');
+define('ELEMENTOR_PREVIEWS_VERSION', '1.0.1');
 define('ELEMENTOR_PREVIEWS_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('ELEMENTOR_PREVIEWS_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('ELEMENTOR_PREVIEWS_PLUGIN_FILE', __FILE__);
