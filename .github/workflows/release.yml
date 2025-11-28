@@ -1,0 +1,36 @@
+name: Build Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get plugin version
+        id: get_version
+        run: |
+          VERSION=$(grep -oP "Version:\s*\K[0-9.]+" wp-content/plugins/elementor-previews/elementor-previews.php)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create Release Zip
+        run: |
+          cd wp-content/plugins
+          zip -r elementor-previews.zip elementor-previews \
+            -x "*.DS_Store" \
+            -x "*/.git/*" \
+            -x "*/node_modules/*" \
+            -x "*/.github/*"
+          mv elementor-previews.zip ../../
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: elementor-previews.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

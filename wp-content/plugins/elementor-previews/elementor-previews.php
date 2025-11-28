@@ -28,6 +28,23 @@ define('ELEMENTOR_PREVIEWS_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('ELEMENTOR_PREVIEWS_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('ELEMENTOR_PREVIEWS_PLUGIN_FILE', __FILE__);
 
+// Initialize Plugin Update Checker for GitHub releases
+require_once ELEMENTOR_PREVIEWS_PLUGIN_PATH . 'plugin-update-checker-5.6/load-v5p6.php';
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$elementor_previews_update_checker = PucFactory::buildUpdateChecker(
+    'https://github.com/webgate-digital/elementor-previews/',
+    __FILE__,
+    'elementor-previews'
+);
+
+// Set the branch that contains the stable release (optional, defaults to master)
+$elementor_previews_update_checker->setBranch('main');
+
+// Enable release assets - this makes it download the zip from GitHub releases
+$elementor_previews_update_checker->getVcsApi()->enableReleaseAssets();
+
 /**
  * Main Elementor Previews Plugin Class
  */
